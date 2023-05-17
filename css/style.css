@@ -1,0 +1,283 @@
+/* Estilo para o corpo da página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #f7f7f7;
+  overflow: hidden;
+}
+
+/* Estilo para a navegação */
+nav {
+  background-color: #333333;
+  height: 60px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+nav li {
+  margin: 0 10px;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Estilo para o cabeçalho */
+.bg-image {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-image::before {
+  content: "";
+  background-image: url('hey.png');
+  background-position: center center;
+  background-size: cover;
+  filter: blur(3px);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 60px #00ff00, 0 0 70px #00ff00, 0 0 80px #00ff00;
+}
+
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: 100%;
+  background-color: #e1eee1;
+  z-index: -1;
+  filter: blur(20px);
+  opacity: 0.8;
+  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+}
+
+
+@keyframes neon-glow {
+  0% {
+    opacity: 0.8;
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+}
+
+
+
+
+/* Estilo para o formulário de login */
+.login-form {
+  background-color: rgba(242, 242, 242, 0.1);
+  padding: 30px;
+  border-radius: 30px;
+  text-shadow: 0 0 5px rgb(65, 179, 116), 0 0 10px rgb(13, 109, 42), 0 0 20px rgb(10, 158, 96), 0 0 40px rgb(10, 158, 96), 0 0 80px #0ff, 0 0 90px #0ff, 0 0 100px #0ff, 0 0 150px #0ff, 0 0 200px #0ff;
+}
+
+.login-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#texto-maquina-escrever {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/* Estilo para o formulário de cadastro e criar conta */
+.signup-form {
+  background-color: rgba(242, 242, 242, 0.1);
+  padding: 30px;
+  border-radius: 30px;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 40px #fff, 0 0 80px #fff;
+  }
+  100% {
+    box-shadow: 0 0 2px #f0f, 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+  }
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+p {
+  color: #cbd0f7;
+}
+
+a {
+  color: #5568fe;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.signup-form h2 {
+  margin-top: 0;
+}
+
+.signup-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.signup-form input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.signup-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Estilo para o ícone do Instagram no login */
+.social-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-link i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.social-link:hover i {
+  color: #f00;
+}
+
+
+.bottom-text {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+
+.image-credits {
+  font-size: 14px;
+  color: #f8e4e4;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+/* icones do instagram */
+
+.icones{
+  width: 25px;
+  heigth: 25px;
+}

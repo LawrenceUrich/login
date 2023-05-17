@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="#">Contato</a></li>
+    </ul>
+  </nav>
+  <div class="bg-image">
+    <div class="content">
+      <h1>Siga-me no instagram</h1>
+      <p id="texto-maquina-escrever" class="animacao-maquina">Não fique de fora ! ! </p>
+    </div>
+    
+    <div class="form-container">
+      <div class="login-form">
+        <h2>Login</h2>
+        <form action="processar_login.php" method="POST">
+          <label for="username">Usuário:</label>
+          <input type="text" name="username" id="username" required>
+          <label for="password">Senha:</label>
+          <input type="password" name="password" id="password" required>
+          <input type="submit" value="Entrar">
+        </form>
+        <p>Ainda não tem uma conta? <a href="Cadastro.html">Criar conta</a></p>
+      </div>
+
+      <div class="bottom-text">
+        <p>Criado por leo_xharry</p>
+        <a href="https://www.instagram.com/leo_xharry/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" class="icones">
+        </a>
+
+        
+        <div class="image-credits">
+          Imagem de fundo de Hollow Knight
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const textoMaquinaEscrever = document.querySelector('#texto-maquina-escrever');
+    const textoOriginal = textoMaquinaEscrever.textContent;
+    let index = 0;
+
+    setInterval(() => {
+      index = index >= textoOriginal.length ? 0 : index;
+      const textoAtual = textoOriginal.substring(0, index++);
+      textoMaquinaEscrever.textContent = textoAtual;
+    }, 200);
+  </script>
+</body>
+</html>
